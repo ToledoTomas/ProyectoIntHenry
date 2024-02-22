@@ -1,0 +1,55 @@
+.divCard{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: solid white 1px;
+    border-radius: 10px;
+    transition: all;
+}
+
+.nombre{
+    position: relative;
+    bottom: 50px;
+    background-color: rgb(240, 248, 255);
+    padding: 0;
+    margin: 0;
+    width: 10em;
+    border-radius: 3px;
+    border-end-start-radius: 0;
+    border-start-start-radius: 0;
+    transition: all;
+    transition-duration: 0.2s;
+    &:hover{
+        width: 11em;
+    }
+}
+
+.boton{
+    background-color: rgb(250, 127, 127);
+    position: relative;
+    top: 22px;
+    left: 125px;
+    border: solid rgb(0, 0, 0) 1px;
+    transition: all;
+    &:hover{
+        background-color: rgb(247, 163, 163);
+    }
+}
+
+.containerInfo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: solid rgb(255, 255, 255) 1px;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.info{
+    font-size: large;
+    color: rgb(0, 0, 0);
+    transition: all;
+    transition-duration:0.1s;
+    &:hover{
+        font-size: larger;
+    }
+}

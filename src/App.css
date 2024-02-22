@@ -1,3 +1,8 @@
 .App {
    text-align: center;
 }
+body{
+   background-image: url("../public/Background-Image.jpg");
+   background-size: 100% auto;
+}
+
