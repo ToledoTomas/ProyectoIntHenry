@@ -3,7 +3,11 @@ import style from './Card.module.css'
 export default function Card(props) {
    return (
       <div className={style.divCard}>
+         
+         <div className={style.divBoton}>
          <button className={style.boton} onClick={props.onClose}>X</button>
+         </div>
+         
          <img src={props.image} alt={`Imágen de ${props.name}` } className={style.imagen} />
          <h2 className={style.nombre}>{props.name}</h2>
          <div className={style.containerInfo}>
