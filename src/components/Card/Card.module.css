@@ -28,21 +28,23 @@
     justify-content: end;
 }
 .boton{
-    background-color: rgb(250, 127, 127);
+    background-color: rgb(252, 154, 154);
     width: 25px;
-    position: relative;
+    position: absolute;
+    top: 65px;
     border: solid rgb(0, 0, 0) 1px;
     transition: all;
     border-start-end-radius: 10px;
     cursor: pointer;
     &:hover{
-        background-color: rgb(247, 163, 163);
-        top: 1px;
+        background-color: rgb(255, 110, 110);
     }
 }
 
 .imagen{
     width: 280px;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
 }
 
 .containerInfo{
