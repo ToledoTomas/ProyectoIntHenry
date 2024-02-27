@@ -4,11 +4,14 @@
     border: solid white 1px;
     border-radius: 10px;
     transition: all;
+    margin-top: 20px;
+    position: relative;
 }
 
 .nombre{
-    position: relative;
-    bottom: 50px;
+    position: absolute;
+    z-index: 100;
+    bottom: 80px;
     background-color: rgb(240, 248, 255);
     padding: 0;
     margin: 0;
@@ -31,7 +34,7 @@
     background-color: rgb(252, 154, 154);
     width: 25px;
     position: absolute;
-    top: 65px;
+    top: 0px;
     border: solid rgb(0, 0, 0) 1px;
     transition: all;
     border-start-end-radius: 10px;
@@ -54,14 +57,18 @@
     border: solid rgb(255, 255, 255) 1px;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
+    margin:0;
 }
 
 .info{
     font-size: large;
     color: rgb(0, 0, 0);
     transition: all;
-    transition-duration:0.1s;
+    transition-duration:0.2s;
     &:hover{
-        font-size: larger;
+        border: solid 1px black;
+        border-radius: 10px;
+        padding: 4px;
+        background-color: rgb(167, 255, 221);
     }
 }

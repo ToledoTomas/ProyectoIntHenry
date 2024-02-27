@@ -3,6 +3,6 @@
     text-align: center;
     justify-content: space-between;
     align-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
