@@ -1,20 +1,23 @@
-import style from './Card.module.css'
+import style from './Card.module.css';
+import { Link } from 'react-router-dom';
 
-export default function Card(props) {
+export default function Card({image, id, name, status, species, gender, origin, onClose}) {
    return (
       <div className={style.divCard}>
          
          <div className={style.divBoton}>
-         <button className={style.boton} onClick={props.onClose}>X</button>
+         <button className={style.boton} onClick={()=>onClose(id)}>X</button>
          </div>
          
-         <img src={props.image} alt={`Imágen de ${props.name}` } className={style.imagen} />
-         <h2 className={style.nombre}>{props.name}</h2>
+         <img src={image} alt={`Imágen de ${name}` } className={style.imagen} />
+         <Link to={`/detail/${id}`}>
+            <h2 className={style.nombre}>{name}</h2>
+         </Link>
          <div className={style.containerInfo}>
-         <h2 className={style.info}>{props.status}</h2>
-         <h2 className={style.info}>{props.species}</h2>
-         <h2 className={style.info}>{props.gender}</h2>
-         {/* <h2 className={style.info}>{props.origin.name}</h2> */}
+         <h2 className={style.info}>{status}</h2>
+         <h2 className={style.info}>{species}</h2>
+         <h2 className={style.info}>{gender}</h2>
+         {/* <h2 className={style.info}>{origin.name}</h2> */}
          </div>
       </div>
    );

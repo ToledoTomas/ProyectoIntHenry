@@ -10,6 +10,7 @@
 
 .nombre{
     position: absolute;
+    color: rgba(0, 0, 0, 0.836);
     z-index: 100;
     bottom: 80px;
     background-color: rgb(240, 248, 255);

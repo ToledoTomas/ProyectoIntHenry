@@ -8,7 +8,7 @@
     display: flex;
 }
 
-a{
+.link{
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin-left: 50px;
