@@ -1,0 +1,27 @@
+/* .container{
+    display:flex;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20vh;
+    width: 200px;
+    padding: 100px;
+    box-shadow: 2px 3px 20px 3px rgba(255,255,255,1);
+    -webkit-box-shadow: 2px 3px 20px 3px rgba(255,255,255,1);
+    -moz-box-shadow: 2px 3px 20px 3px rgba(255,255,255,1);
+}
+.user{
+    width: 400px;
+    padding: 5px;
+}
+.pass{
+    width: 400px;
+    padding: 5px;
+}
+.text{
+    margin-right: 5px;
+    font-weight: bold;
+}
+.button{
+    margin-top: 10px;
+} */
