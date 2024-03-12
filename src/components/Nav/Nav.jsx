@@ -8,6 +8,7 @@ const Nav = ({onSearch}) => {
         <div className={style.divSecond}>
             <Link className ={style.link} to="/home">Home</Link>
             <Link className ={style.link} to="/about">About</Link>
+            <Link className ={style.link} to="/favorites">Favorites</Link>
         </div>
         <SearchBar onSearch={onSearch}/>
     </div>
