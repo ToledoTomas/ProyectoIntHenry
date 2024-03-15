@@ -21,21 +21,27 @@ const Detail = () => {
   }, [id]);
 
   return (
-    <div className={style.divCard}>
-      <img
-        src={character.image}
-        alt={`Imágen de ${character.name}`}
-        className={style.imagen}
-      />
-      <Link to={`/detail/${id}`}>
-        <h2 className={style.nombre}>{character.name}</h2>
-      </Link>
-      <div className={style.containerInfo}>
-        <h2 className={style.info}>{character.status}</h2>
-        <h2 className={style.info}>{character.species}</h2>
-        <h2 className={style.info}>{character.gender}</h2>
-        {/* <h2 className={style.info}>{origin.name}</h2> */}
+    <div className={style.container}>
+
+      <div className={style.containerLeft}>
+        <h2 className={style.h2}>ID: {<span className={style.span}>{character.id}</span>}</h2>
+        <h2 className={style.h2}>Name: {<span className={style.span}>{character.name}</span>}</h2>
+        <h2 className={style.h2}>Status: {<span className={style.span}>{character.status}</span>}</h2>
+        </div>
+
+        <div>
+        <img
+          src={character.image}
+          alt={`Imágen de ${character.name}`}
+          className={style.imagen} />
+        </div>
+
+      <div className={style.containerRight}>
+        <h2 className={style.h2}>Species: {<span className={style.span}>{character.species}</span>}</h2>
+        <h2 className={style.h2}>Gender: {<span className={style.span}>{character.gender}</span>}</h2>
+        <h2 className={style.h2}>Origin: {<span className={style.span}>{character.origin?.name}</span>}</h2>
       </div>
+
     </div>
   );
 };

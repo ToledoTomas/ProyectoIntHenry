@@ -31,14 +31,14 @@ const Form = ({login}) => {
 
       <div className={style.user}>
         <label htmlFor="email" className={style.text}>User:</label>
-        <input onChange={handleChange} type="text" name="email"value={userData.email} required />
-        {errors.email ? <span>{errors.email}</span> : null}
+        <input className={style.input} onChange={handleChange} type="text" name="email"value={userData.email} required />
+        {errors.email ? <p className={style.error}>{errors.email}</p> : null}
       </div>
 
       <div className={style.pass}>
         <label htmlFor="password" className={style.text}>Password:</label>
-        <input onChange={handleChange} type="password" name="password" value={userData.password} required/>
-        {errors.password ? <span>{errors.password}</span> : null}
+        <input className={style.input} onChange={handleChange} type="password" name="password" value={userData.password} required/>
+        {errors.password ? <p className={style.error}>{errors.password}</p> : null}
       </div>
       
       <button type="submit" className={style.button}>Submit</button>

@@ -24,7 +24,7 @@ function rootReducer (state = initialState, action) {
             const filteredCharacters = 
             action.payload === "ALL" 
             ? state.allCharacters
-            : state.allCharacters.filter((char) => {
+            : state.allCharacters.filter(char => {
                 return char.gender === action.payload
             });
 

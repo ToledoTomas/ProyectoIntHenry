@@ -1,6 +1,6 @@
 import { addFav, removeFav } from "../../redux/actions";
 import style from "./Card.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
 
@@ -20,6 +20,8 @@ function Card({
   
    const [isFav, setIsFav] = useState(false);
 
+   const { pathname } = useLocation();
+
    useEffect(() => {
       myFavorites.forEach((fav) => {
          if (fav.id === id) {
@@ -37,22 +39,27 @@ function Card({
 
   return (
     <div className={style.divCard}>
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
 
-      <div className={style.divBoton}>
+      { pathname !== "/favorites" 
+      ? <div className={style.divBoton}>
         <button className={style.boton} onClick={() => onClose(id)}>
           X
         </button>
-      </div>
+      </div> 
+      :
+      null}
 
       <img src={image} alt={`Imágen de ${name}`} className={style.imagen} />
       <Link to={`/detail/${id}`}>
         <h2 className={style.nombre}>{name}</h2>
       </Link>
+
+      {isFav ? (
+        <button onClick={handleFavorite} className={style.fav}>❤️</button>
+      ) : (
+        <button onClick={handleFavorite} className={style.fav}>🤍</button>
+      )}
+
       <div className={style.containerInfo}>
         <h2 className={style.info}>{status}</h2>
         <h2 className={style.info}>{species}</h2>
