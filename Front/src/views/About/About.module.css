@@ -1,0 +1,18 @@
+.title{
+    display: flex;
+    margin-left: 53vh;
+}
+.paragraph{
+    margin-left: 10px;
+    align-items: start;
+    display: flex;
+    width: 50vw;
+    font-size: x-large;
+}
+.image{
+    width: 60vh;
+}
+.containerAll{
+    display: flex;
+    justify-content: space-around;
+}

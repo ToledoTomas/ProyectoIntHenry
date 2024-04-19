@@ -1,0 +1,10 @@
+.App {
+   text-align: center;
+}
+body{
+   background: url("../public/Background-Image.jpg") no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   margin: 0;
+}
+
