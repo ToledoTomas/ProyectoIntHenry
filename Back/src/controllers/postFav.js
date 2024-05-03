@@ -1,17 +1,18 @@
 const { Favorite } = require("../DB_connection");
 
 exports.postFav = async (req, res) => {
-  try {
-    const { id, name, origin, status, image, species, gender } = req.body;
+    const { id, name, status, image, species, gender } = req.body;
 
-    if (!id || !name || !origin || !status || !image || !species || !gender)
+  try {
+
+    if (!id || !name || !status || !image || !species || !gender)
       return res.status(400).json({ error: "Faltan datos" });
 
     const [charFav, created] = await Favorite.findOrCreate({
       where: { id },
       defaults: {
         name,
-        origin,
+        origin: "Earth",
         status,
         image,
         species,

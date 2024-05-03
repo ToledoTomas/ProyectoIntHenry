@@ -1,7 +1,7 @@
 const { Favorite } = require("../DB_connection");
 
 exports.deleteFav = async (req, res) => {
-  const { id } = req.params();
+  const { id } = req.params;
 
   try {
     if (!id) return res.status(400).json({ error: "falta el ID" });

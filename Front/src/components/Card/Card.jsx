@@ -11,7 +11,6 @@ function Card({
   status,
   species,
   gender,
-  origin,
   onClose,
   agregarFavorito,
   removerFavorito,
